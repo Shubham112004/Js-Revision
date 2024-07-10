@@ -1,3 +1,5 @@
+/*
+
 let score = "23abc"
 let score1 = null
 let score2 = undefined
@@ -25,3 +27,22 @@ let anyNumber = 25
 let stringAnyNumber = String(anyNumber)
 
 console.log(stringAnyNumber + " " + typeof stringAnyNumber);
+
+*/
+/*******OPERATIONS********/
+// console.log(2 + 3);
+// console.log(2 - 3);
+// console.log(2 * 3);
+// console.log(2 ** 3);
+// console.log(2 / 3);
+// console.log(2 % 3);
+
+console.log("1" + 2);
+console.log(1 + "2");
+console.log("1" + 2 + 2);   //122
+console.log(1 + 2 + "2");   //32
+
+// console.log(+true); //1
+// console.log(+"");   //0
+
+//explore prefix and postfix - jsMDN
