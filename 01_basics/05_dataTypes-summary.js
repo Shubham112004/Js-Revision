@@ -1,4 +1,4 @@
-//primitive
+//primitive [stack -> Copy of Memory]
 // string, number, boolean, null, undefined, symbol, bigint
 
 const score = 100
@@ -14,7 +14,7 @@ console.log(id === anotherId);
 
 const bigNumber = 6546562465432654654n;
 
-//reference (non primitive)
+//reference (non primitive) [heap -> Original memory(reference of memory)]
 //array, object, function
 
 const fruits = ["mangos", "banana", "apple"]
