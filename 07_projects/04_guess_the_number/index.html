@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <p class="text-center">Try and guess a number between 1 and 50</p>
+    <p class="text-center">You have 10 attempts to guess the right number</p>
+    <h2 class="text-center">Guess a Number</h2>
+    <div class="d-flex justify-content-center align-self-center">
+        <form class="w-50 text-center">
+            <input type="text" class="form-control" placeholder="Enter your guess" id="user-guess-input">
+            <div class="text-danger" id="errorMsg"></div>
+            <button class="btn btn-secondary mt-3 w-50" id="submit-btn">Submit Guess</button>
+        </form>
+    </div>
+    <div class="text-center mt-4">
+        <p>Previous Gusses: <span id="prev"></span></p>
+        <p>Gusses Remaining: <span id="rem">10</span></p>
+    </div>
+    <div class="text-center">
+        <h4 class="d-none">Game Over. random number was <span id="result"></span></h4>
+        <h3 class="d-none">Congrats!! You Won</h3>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
