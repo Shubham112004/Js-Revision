@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h2>Images</h2>
+    <ul id="images">
+        <li><img src="https://cdn.pixabay.com/photo/2023/03/03/23/20/car-7828554_640.jpg" id="a" width="200"
+                height="200" alt=""></li>
+        <li><img src="https://cdn.pixabay.com/photo/2024/04/04/03/08/ai-generated-8674235_1280.png" id="b" width="200"
+                height="200" alt=""></li>
+        <li><img src="https://cdn.pixabay.com/photo/2016/02/13/13/11/oldtimer-1197800_640.jpg" id="c" width="200"
+                height="200" alt="">
+        </li>
+        <li><img src="https://cdn.pixabay.com/photo/2019/07/07/14/03/fiat-500-4322521_640.jpg" id="d" width="200"
+                height="200" alt="">
+        </li>
+        <li><img src="https://cdn.pixabay.com/photo/2024/01/17/12/06/car-8514314_1280.png" id="e" width="200"
+                height="200" alt="">
+        </li>
+        <li><a href="https://google.com" id="google">Goole</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('a').onclick = function () {
+    //     alert('first image clicked')
+    // }
+
+    //type, timestamp, preventDefault, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altkey, ctrlKey, shiftKey, keyCode
+
+    /*
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log('clicked inside the ul');
+    }, false)
+
+    document.getElementById('a').addEventListener('click', function (e) {
+        console.log('clicked on first car');
+        // e.stopPropagation()
+    }, false)
+    */
+
+    // by default the false paramater is there in addEventlistener - > bublling mode [bottom--top] 
+    // by passing the true paramater in addEventlistener - > capturing mode [top--bottom], look difference in log in both conditions (true, false)
+
+
+    /*
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log('clicked inside the ul');
+    }, true)
+
+    document.getElementById('a').addEventListener('click', function (e) {
+        console.log('clicked on first car');
+    }, true)
+    */
+
+    /*
+    document.getElementById('google').addEventListener('click', function (e) {
+        e.preventDefault()
+        console.log('google cliked');
+    })
+    */
+
+
+    document.querySelector('#images').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        // removeIt.parentNode.removeChild(removeIt)
+    })
+
+</script>
+
+</html>
